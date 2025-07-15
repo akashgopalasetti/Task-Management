@@ -1,0 +1,45 @@
+/* 📁 frontend/src/pages/HomePage.css */
+
+.homepage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.homepage-box {
+  text-align: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.homepage-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.homepage-subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #7f8c8d;
+}
+
+.homepage-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.homepage-button:hover {
+  background-color: #2980b9;
+}

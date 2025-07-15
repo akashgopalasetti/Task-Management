@@ -1,0 +1,180 @@
+.employee-dashboard {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 24px;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+/* Title */
+.employee-dashboard h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #111827;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  padding: 18px 24px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.card.total { border-left: 6px solid #6366f1; }
+.card.ongoing { border-left: 6px solid #fbbf24; }
+.card.completed { border-left: 6px solid #10b981; }
+.card.stopped { border-left: 6px solid #ef4444; }
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  padding: 10px 20px;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: #6366f1;
+  color: white;
+}
+
+/* Task Cards */
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.task-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Task Status */
+.status {
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-transform: capitalize;
+}
+
+.status.assigned { background-color: #e0f2fe; color: #0284c7; }
+.status.in-progress { background-color: #fef3c7; color: #b45309; }
+.status.stopped { background-color: #fee2e2; color: #dc2626; }
+.status.completed { background-color: #d1fae5; color: #047857; }
+
+/* Progress Bar */
+.progress-bar {
+  height: 10px;
+  background-color: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4f46e5;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Urgent */
+.urgent {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Update Section */
+.update-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.update-section input {
+  padding: 6px 10px;
+  width: 80px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.update-section button {
+  padding: 6px 12px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.update-section button:hover {
+  background-color: #4f46e5;
+}
+
+/* Details Button */
+.details-btn {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 8px 16px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-btn:hover {
+  background-color: #059669;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .summary-cards {
+    flex-direction: column;
+  }
+
+  .task-form-layout {
+    grid-template-columns: 1fr;
+  }
+}
